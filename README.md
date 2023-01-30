@@ -1,4 +1,4 @@
-# Workiva iXBRL Viewer
+# Workiva iXBRL Viewer testing for Cristian
 
 The [Workiva](https://www.workiva.com) iXBRL Viewer allows [Inline XBRL](https://www.xbrl.org/ixbrl) (or iXBRL) reports to be viewed interactively in a web browser.  The viewer allows users to access the tagged XBRL data embedded in an iXBRL report.  Key features include:
 
@@ -190,4 +190,4 @@ Run the following command to run javascript unit tests: `npm run test`
 
 In order to run the python unit tests make sure that you have pip installed requirements-dev.txt.
 
-Run the following command to run python unit tests: `nosetests`
+Run the following command to run python unit tests: `nose2`
