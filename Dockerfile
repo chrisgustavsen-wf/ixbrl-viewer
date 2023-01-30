@@ -7,7 +7,10 @@ ARG GIT_TAG
 
 ARG NPMRC
 ARG NPM_CONFIG_USERCONFIG=/.npmrc
-RUN echo -n $NPMRC > $NPM_CONFIG_USERCONFIG
+RUN reg=$(echo "$NPM_CONFIG_REGISTRY" | cut -d ":" -f 2) && \
+    echo "$reg:_authToken = $NPM_CONFIG__AUTH" > /.npmrc && \
+    echo "registry = $NPM_CONFIG_REGISTRY" >> /.npmrc && \
+    echo "always-auth = true" >> /.npmrc
 
 
 WORKDIR /build/
